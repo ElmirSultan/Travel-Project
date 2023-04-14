@@ -1,0 +1,1134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
+html,body{
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    
+}
+a{
+    text-decoration: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+*::after,*::before{
+    margin: 0;
+    padding: 0;
+}
+::placeholder{
+  font-family: 'Poppins', sans-serif;
+}
+::-webkit-scrollbar{
+    background-color: inherit;
+    width: 0.5rem;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #004191;
+    border-radius: 1rem;
+}
+
+header {
+    padding: 2rem 0;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    z-index: 5;
+    width: 100%;
+    
+}
+.hdre.yap{
+    background-color: #fff;
+    box-shadow: 0px 0px 1.5rem #aaa;
+  }
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: inherit;
+    z-index: 9;
+    max-width: 1240px;
+    margin: 0 auto;
+ 
+}
+header .logos,.menu-text{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+ header .menu-text{
+    font-size: 2rem;
+    color: #004191;
+    padding-left: 1rem;
+    cursor: pointer;
+}
+header .menu-text p{
+    font-size: 2rem;
+    color: #004191;
+    width: 10rem;
+    overflow: hidden;
+    position: relative;
+}
+header .menu-text p::after{
+    content: 'OPEN';
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: .2s all ease;
+}
+
+header .menu-text p:hover::after{
+    top: 0;
+    
+ }
+ header .menu-text .menu-yazisi.aktivlessin::after{
+    content: 'CLOSE';
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: .2s all ease;
+}
+header .menu-text .menu-yazisi:hover::after{
+    top: 0;
+    
+ }
+header .open-header{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    z-index: 100;
+}
+header .open-header.active{
+    display: block;
+    z-index: 100;
+}
+.open-header .header-box{
+    display: flex;
+}
+
+.open-header .header-box .sol-header{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:0;
+    width: 0;
+    transition: all .5s ease;
+    overflow: hidden;
+}
+.open-header .header-box .sol-header.active{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.open-header .header-box .sol-header div{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.open-header .header-box .sol-header a{
+    font-size: 7rem;
+    line-height: 9rem;
+    font-weight: 700;
+    text-shadow: 0px 0px 0.3rem #004191;
+    color: #fff;
+    transition: all .5s ease-in-out;
+    
+}
+.open-header .header-box .sol-header .nav-link.active{
+    color: #004191;
+}
+.open-header.active .header-box .sol-header a:hover{
+    text-shadow: 0px 0px 0.3rem #004191;
+    color: #004191;
+    
+}
+
+.open-header .header-box .sag-header{
+    flex: 1;
+    background-color: #004191;
+    color: #fff;
+    height:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 0;
+    overflow: hidden;
+}
+.open-header .header-box .sag-header.active{
+    flex: 1;
+    background-color: #004191;
+    color: #fff;
+    height:100vh ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: all .5s ease-in-out;
+}
+.open-header .header-box .sag-header .top-numbers{
+    display: flex;
+    gap: 4rem;
+}
+.open-header .header-box .sag-header .top-numbers a{
+    color: #fff;
+    font-size: 1.6rem;
+}
+.open-header .header-box .sag-header .bottom-numbers{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.open-header .header-box .sag-header .bottom-numbers .tentler h5{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.open-header .header-box .sag-header .bottom-numbers .tentler p{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.open-header .header-box .sag-header .bottom-icons{
+    display: flex;
+    gap: 3rem;
+    color: #fff;
+}
+.first-destination{
+    padding: 0 2rem;
+    padding-top : 10rem;
+    width: 100%;
+    margin: 7rem 0;
+}
+.first-destination .box-container{
+    display: flex;
+    gap: 6rem;
+}
+.first-destination .box-container .left-side{
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 4rem;
+}
+.first-destination .box-container .right-side{
+    flex: 1;
+    display: flex;
+    padding: 0 1rem;
+    gap: 2rem;
+}
+.first-destination .box-container .left-side h1{
+    font-size: 3rem;
+    transform: translateX(-3rem);
+    font-weight: 700;
+    color: #004191;
+}
+.first-destination .box-container .left-side p{
+    font-size: 1.7rem;
+    line-height: 2.6rem;
+    font-weight: 300;
+}
+
+.first-destination .box-container .right-side .saray.aktiv{
+    background: url(./assets/svgs/haliyev.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30rem;
+    height: 50rem;
+    position: relative;
+    transition: all .6s ease-in-out;
+}
+.first-destination .box-container .right-side .saray{
+    background: url(./assets/svgs/haliyev.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20rem;
+    height: 50rem;
+    position: relative;
+    transition: all .6s ease-in;
+    cursor: pointer;
+}
+.first-destination .box-container .right-side .saray.aktiv .saray-qutu{
+    position: absolute;
+    bottom: 1rem;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    gap: 14rem;
+    align-items: center;
+    color: #fff;
+}
+.first-destination .box-container .right-side .saray .saray-qutu{
+    position: absolute;
+    bottom: 0rem;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    color: #fff;
+    transform: translateX(0rem);
+}
+.first-destination .box-container .right-side .saray .saray-qutu .left-saray{
+    transform: rotate(270deg);
+    position: relative;
+    bottom: 3rem;
+    transition: all .6s ease;
+    
+}
+.first-destination .box-container .right-side .saray.aktiv .saray-qutu .left-saray{
+    transform: rotate(360deg);
+    bottom: 0;
+    
+}
+.first-destination .box-container .right-side .saray .saray-qutu p{
+    font-size: 2rem;
+    font-weight: 400;
+}
+.first-destination .box-container .right-side .saray .saray-qutu h5{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+.first-destination .box-container .right-side .saray .saray-qutu i{
+    font-size: 2.8rem;
+}
+.first-destination .box-container .right-side .saray:hover{
+    width: 30rem;
+    height: 50rem;
+}
+.first-destination .box-container .right-side .saray:hover .saray-qutu{
+    transform: translateX(0rem);
+    gap: 14rem;
+}
+.first-destination .box-container .right-side .saray:hover .saray-qutu .left-saray{
+    transform: rotate(360deg);
+    bottom: 0;
+}
+.first-destination .box-container .right-side .kpdk{
+    background: url(./assets/svgs/kpdk.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20rem;
+    height: 50rem;
+    position: relative;
+    transition: all .6s ease-in;
+    cursor: pointer;
+}
+.first-destination .box-container .right-side .kpdk:hover{
+    width: 30rem;
+    height: 50rem;
+}
+.first-destination .box-container .right-side .kpdk:hover .kpdk-qutu{
+    transform: translateX(0rem);
+    gap: 4rem;
+}
+.first-destination .box-container .right-side .kpdk:hover .kpdk-qutu .left-kpdk{
+    transform: rotate(360deg);
+    bottom: 0;
+}
+.first-destination .box-container .right-side .kpdk.aktiv{
+    background: url(./assets/svgs/kpdk.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30rem;
+    height: 50rem;
+    position: relative;
+    transition: all .6s ease-in-out;
+}
+.first-destination .box-container .right-side .kpdk .kpdk-qutu{
+    position: absolute;
+    bottom: 1rem;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    color: #fff;
+    transform: translateX(-6rem);
+}
+.first-destination .box-container .right-side .kpdk.aktiv .kpdk-qutu{
+    position: absolute;
+    bottom: 1rem;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    color: #fff;
+    transform: translateX(0rem);
+}
+.first-destination .box-container .right-side .kpdk .kpdk-qutu p{
+    font-size: 2rem;
+    font-weight: 400;
+}
+.first-destination .box-container .right-side .kpdk .kpdk-qutu h5{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+.first-destination .box-container .right-side .kpdk .kpdk-qutu i{
+    font-size: 2.8rem;
+}
+.first-destination .box-container .right-side .kpdk .kpdk-qutu .left-kpdk{
+    transform: rotate(270deg);
+    transition: all .6s ease;
+    position: relative;
+    bottom: 5rem;
+    
+}
+.first-destination .box-container .right-side .kpdk.aktiv .kpdk-qutu .left-kpdk{
+    transform: rotate(360deg);
+    position: relative;
+    bottom: 0rem;
+    
+}
+
+.forget-the-risks{
+    width: 100%;
+    margin: 5rem 0;
+}
+.forget-the-risks .qutular{
+    display: flex;
+}
+.forget-the-risks .qutular .sol-qutu{
+   flex-basis: 50%;
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+   padding: 0 4rem;
+}
+.forget-the-risks .qutular .sag-qutu{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 4rem;
+    gap: 2rem;
+}
+.forget-the-risks .qutular .sag-qutu h1{
+    font-size: 3rem;
+    transform: translateX(-5rem);
+    font-weight: 700;
+    color: #004191;
+    text-transform: uppercase;
+}
+.forget-the-risks .qutular .sag-qutu p{
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+.forget-the-risks .qutular .sol-qutu .azerbaijan{
+    max-width: 40rem;
+    transition: all .5s ease-in;
+}
+.forget-the-risks .qutular .sol-qutu .azerbaijan.active{
+    max-width: 50rem;
+    transition: all .5s ease-in-out;
+}
+.forget-the-risks .qutular .sol-qutu .azerbaijan .aze{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 3rem;
+    box-shadow: 0px 0px 0.5rem #aaa;
+    cursor: pointer;
+}
+.forget-the-risks .qutular .sol-qutu .azerbaijan.active .aze{
+    border: 1px solid #004191;
+    box-shadow: none;
+}
+.forget-the-risks .qutular .sol-qutu .azerbaijan .aze span{
+    width: 2rem !important;
+    height: 2rem !important;
+    border-radius: 5rem;
+    border: 1px solid #004191;
+}
+.forget-the-risks .qutular .sol-qutu .azerbaijan .aze-cities{
+   display: none;
+}
+.forget-the-risks .qutular .sol-qutu .azerbaijan.active .aze-cities{
+    display: flex;
+    flex-direction: column;
+}
+.forget-the-risks .qutular .sol-qutu .azerbaijan.active .aze span{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5rem;
+    border: 1px solid #004191;
+    background-color: #004191;
+}
+.forget-the-risks .qutular .sol-qutu .azerbaijan .aze .bayraq{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.forget-the-risks .qutular .sol-qutu .azerbaijan .aze .bayraq h4{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #004191;
+}
+.forget-the-risks .qutular .sol-qutu .azerbaijan ul{
+    transform: translateX(3.5rem);
+}
+.forget-the-risks .qutular .sol-qutu .azerbaijan ul li{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #004191;
+    list-style-position: inside;
+}
+
+.forget-the-risks .qutular .sol-qutu .turkey{
+    max-width: 40rem;
+    transition: all .5s ease-in;
+}
+.forget-the-risks .qutular .sol-qutu .turkey .turk-cities{
+    display: none;
+}
+.forget-the-risks .qutular .sol-qutu .turkey.active .turk-cities{
+    display: flex;
+    flex-direction: column;
+}
+.forget-the-risks .qutular .sol-qutu .turkey.active{
+    max-width: 50rem;
+    transition: all .5s ease-in-out;
+}
+
+.forget-the-risks .qutular .sol-qutu .turkey .tr{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 3rem;
+    box-shadow: 0px 0px 0.5rem #aaa;
+    cursor: pointer;
+}
+.forget-the-risks .qutular .sol-qutu .turkey.active .tr{
+    border: 1px solid #004191;
+    box-shadow: none;
+    
+}
+.forget-the-risks .qutular .sol-qutu .turkey .tr span{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5rem;
+    border: 1px solid #004191;
+}
+.forget-the-risks .qutular .sol-qutu .turkey.active .tr span{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5rem;
+    border: 1px solid #004191;
+    background-color: #004191;
+}
+.forget-the-risks .qutular .sol-qutu .turkey .tr .bayraq{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.forget-the-risks .qutular .sol-qutu .turkey .tr .bayraq h4{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #004191;
+}
+.forget-the-risks .qutular .sol-qutu .turkey ul{
+    transform: translateX(3.5rem);
+}
+.forget-the-risks .qutular .sol-qutu .turkey ul li{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #004191;
+    list-style-position: inside;
+}
+.inspire-you{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+    overflow: hidden;
+    margin: 3rem auto;
+}
+.inspire-you h1{
+    font-size: 3rem;
+    color: #004191;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+}
+.inspire-you .sekil-qutulari{
+    display: flex;
+}
+.inspire-you .sekil-qutulari img{
+    transition: all .5s ease;
+    cursor: pointer;
+}
+.inspire-you .sekil-qutulari img:nth-child(even){
+    transform: translateY(4rem);
+}
+.inspire-you .sekil-qutulari img:hover{
+    transform: translateY(-2rem);
+}
+.explore{
+    padding: 4rem 2rem;
+    margin: 7rem 0;
+}
+.explore .explore-qutu{
+    display: flex;
+}
+.explore .explore-qutu .sol-explore{
+    flex-basis: 50%;
+    padding: 0 4rem;
+}
+.explore .explore-qutu .sol-explore h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #004191;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    transform: translateX(-3rem);
+}
+.explore .explore-qutu .sol-explore p{
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+.explore .explore-qutu .sag-explore{
+    flex: 1;
+}
+.travel{
+    width: 100%;
+    padding: 2rem;
+}
+.travel .travel-qutu{
+    display: flex;
+}
+.travel .travel-qutu .sol-travel{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.travel .travel-qutu .sag-travel{
+    flex: 1;
+    padding: 0 4rem;
+}
+.travel .travel-qutu .sag-travel .basliq{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    transform: translateX(-2rem);
+    margin-bottom: 2rem;
+}
+.travel .travel-qutu .sag-travel .basliq .basliq-sekil{
+    position: relative;
+}
+.travel .travel-qutu .sag-travel .basliq .basliq-sekil img:nth-child(2){
+    position: absolute;
+    bottom: -2rem;
+    left: -2rem;
+}
+.travel .travel-qutu .sag-travel .basliq h1{
+    font-size: 2.2rem;
+    color: #004191;
+    font-weight: 700;
+    
+}
+.travel .travel-qutu .sag-travel p{
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+.travel .travel-qutular .travel-qutu .sol-travel{
+    width: 100%;
+}
+.travel .travel-qutular .travel-qutu .sol-travel img{
+    width: 100%;
+}
+.airport{
+    padding: 2rem;
+    margin: 7rem 0;
+}
+.airport .airport-qutular{
+    display: flex;
+    gap: 3rem;
+}
+.airport .airport-qutular .sol-airport{
+    flex-basis: 50%;
+}
+.airport .airport-qutular .sag-airport{
+    flex: 1;
+}
+.airport .airport-qutular .sol-airport .basliq{
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.airport .airport-qutular .sol-airport .basliq .basliq-sekil{
+    position: relative;
+}
+.airport .airport-qutular .sol-airport .basliq img:nth-child(2){
+    position: absolute;
+    bottom: -2rem;
+    left: -2rem;
+}
+.airport .airport-qutular .sol-airport .basliq h1{
+    font-size: 2.2rem;
+    color: #004191;
+    font-weight: 700;
+}
+.airport .airport-qutular .sol-airport p{
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+.airport .airport-qutular .sag-airport{
+    width: 100%;
+}
+.airport .airport-qutular .sag-airport img{
+    width: 100%;
+}
+
+.stiki{
+    display: flex;
+    gap: 1rem;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+}
+.stiki i{
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 15rem;
+    background-color: #004191;
+    color: #fff;
+    cursor: pointer;
+    transition: all .5s ease;
+    z-index: 10;
+
+}
+.stiki i:hover{
+    background-color: rgb(30, 213, 30);
+}
+
+
+footer{
+    padding: 7rem 0rem 0rem 0rem;
+    box-shadow: 0px 0px 1.5rem #0000007a;
+  }
+  footer .footer-sides{
+    display: flex;
+    justify-content: space-around;
+  }
+  .footer-sides .left-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .footer-sides .left-footer form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-size: 2rem;
+    border: 1px solid #004191;
+    max-width: 30rem;
+  }
+  .footer-sides .left-footer form input{
+    border: none;
+    outline: none;
+    width: 100%;
+  }
+  .footer-sides .left-footer a{
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #004191;
+  }
+  .footer-sides .left-footer p{
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+  .footer-sides .right-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .footer-sides .right-footer .top-side-right-footer{
+    display: flex;
+    gap: 5rem;
+    margin-bottom: 4rem;
+  }
+  .footer-sides .right-footer .top-side-right-footer a{
+    font-weight: 700;
+    color: #004191;
+    font-size: 1.6rem;
+  }
+  .footer-sides .right-footer .middle-side-right-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .footer-sides .right-footer .middle-side-right-footer p{
+    font-weight: 700;
+    color: #004191;
+    font-size: 1.6rem;
+  }
+  .footer-sides .right-footer .middle-side-right-footer span{
+    font-weight: 300;
+    font-size: 2rem;
+  }
+  .footer-sides .right-footer .middle-side-right-footer .numbers{
+    display: flex;
+    gap: 3rem;
+  
+  }
+  .footer-sides .right-footer .middle-side-right-footer .numbers a{
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #004191;
+  }
+  .footer-sides .right-footer .bottom-side-right-footer{
+    display: flex;
+    margin-top: 2rem;
+    gap: 3rem;
+  }
+  footer .bottom-footer{
+    background: url(./assets/svgs/wave.svg);
+    width: 100%;
+    padding-top: 5rem;
+    height: 10rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .bottom-footer p{
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #fff;
+  }
+  @media(max-width:1163px){
+    header .open-header.active .header-box{
+        display: flex;
+        flex-direction: column;
+    }
+    header .open-header .header-box .sol-header{
+        width: 100%;
+    }
+    .header-box .sol-header div{
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+    }
+    header .open-header .header-box .sol-header a{
+        font-size: 5rem;
+    }
+    header .open-header .header-box .sag-header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        gap: 2rem;
+    }
+    header .open-header .header-box .sag-header .top-numbers{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    header .open-header .header-box .sag-header .bottom-numbers{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+  }
+  @media(max-width:1024px){
+    .first-destination .box-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .first-destination .box-container .left-side h1{
+        font-size: 2rem;
+    }
+    .first-destination .box-container .left-side p{
+        font-size: 1.4rem;
+    }
+    .first-destination .box-container .right-side{
+        padding: 0 3rem;
+    }
+    .first-destination .box-container .right-side .saray .saray-qutu .left-saray h5{
+        font-size: 2rem;
+      
+    }
+    .first-destination .box-container .right-side .saray .saray-qutu .left-saray p{
+        font-size: 1.6rem;
+      
+    }
+    .first-destination .box-container .right-side .saray .saray-qutu i{
+        display: none;
+    }
+    .first-destination .box-container .right-side .kpdk .kpdk-qutu .left-kpdk{
+        padding-left: 2rem;
+    }
+    .first-destination .box-container .right-side .kpdk .kpdk-qutu .left-kpdk h5{
+        font-size: 2rem;
+      
+    }
+    .first-destination .box-container .right-side .kpdk .kpdk-qutu .left-kpdk p{
+        font-size: 1.6rem;
+      
+    }
+    .first-destination .box-container .right-side .kpdk .kpdk-qutu i{
+        display: none;
+    }
+
+    .forget-the-risks .qutular{
+        display: flex;
+        flex-direction: column;
+    }
+    .forget-the-risks .qutular .sag-qutu h1{
+        font-size: 2rem;
+        margin-top: 2rem;
+        transform: none;
+    }
+    .forget-the-risks .qutular .sag-qutu p{
+        font-size: 1.6rem;
+    }
+
+    .inspire-you .sekil-qutulari{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .inspire-you .sekil-qutulari img:nth-child(even){
+        transform: translateY(0rem);
+    }
+    .inspire-you .sekil-qutulari img:hover{
+        transform: none;
+    }
+    .explore .explore-qutu{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .explore .explore-qutu .sol-explore h1{
+        font-size: 2rem;
+    }
+    .explore .explore-qutu .sol-explore p{
+        font-size: 1.4rem;
+    }
+    .travel .travel-qutu{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .travel .travel-qutu .sag-travel h1{
+        font-size: 2rem;
+    }
+    .travel .travel-qutu .sag-travel p{
+        font-size: 1.4rem;
+    }
+    .airport .airport-qutular{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .airport .airport-qutular .sol-airport h1{
+        font-size: 2rem;
+    }
+    .airport .airport-qutular .sol-airport p{
+        font-size: 1.4rem;
+    }
+
+    footer .footer-sides{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 2rem;
+      }
+      .footer-sides .right-footer .top-side-right-footer{
+        display: flex;
+        gap: 2rem;
+       
+      }
+      .footer-sides .right-footer .top-side-right-footer a{
+        font-size: 1.4rem;
+      }
+  
+  }
+
+  @media(max-width:768px){
+    header nav img{
+        max-width: 13rem;
+      }
+    header .open-header.active .header-box{
+        display: flex;
+        flex-direction: column;
+    }
+    header .open-header .header-box .sol-header{
+        width: 100%;
+    }
+    .header-box .sol-header div{
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+    }
+    header .open-header .header-box .sol-header a{
+        font-size: 4rem;
+    }
+    header .open-header .header-box .sag-header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        gap: 2rem;
+    }
+    header .open-header .header-box .sag-header .top-numbers{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    header .open-header .header-box .sag-header .bottom-numbers{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .first-destination .box-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .first-destination .box-container .left-side h1{
+        font-size: 2rem;
+    }
+    .first-destination .box-container .left-side p{
+        font-size: 1.4rem;
+    }
+    .first-destination .box-container .right-side{
+        padding: 0 3rem;
+    }
+    .first-destination .box-container .right-side .saray .saray-qutu .left-saray h5{
+        font-size: 2rem;
+      
+    }
+    .first-destination .box-container .right-side .saray .saray-qutu .left-saray p{
+        font-size: 1.6rem;
+      
+    }
+    .first-destination .box-container .right-side .saray .saray-qutu i{
+        display: none;
+    }
+    .first-destination .box-container .right-side .kpdk .kpdk-qutu .left-kpdk{
+        padding-left: 2rem;
+    }
+    .first-destination .box-container .right-side .kpdk .kpdk-qutu .left-kpdk h5{
+        font-size: 2rem;
+      
+    }
+    .first-destination .box-container .right-side .kpdk .kpdk-qutu .left-kpdk p{
+        font-size: 1.6rem;
+      
+    }
+    .first-destination .box-container .right-side .kpdk .kpdk-qutu i{
+        display: none;
+    }
+
+    .forget-the-risks .qutular{
+        display: flex;
+        flex-direction: column;
+    }
+    .forget-the-risks .qutular .sag-qutu h1{
+        font-size: 2rem;
+        margin-top: 2rem;
+        transform: none;
+    }
+    .forget-the-risks .qutular .sag-qutu p{
+        font-size: 1.6rem;
+    }
+
+    .inspire-you .sekil-qutulari{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .inspire-you .sekil-qutulari img:nth-child(even){
+        transform: translateY(0rem);
+    }
+    .inspire-you .sekil-qutulari img:hover{
+        transform: none;
+    }
+    .explore .explore-qutu{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .explore .explore-qutu .sol-explore h1{
+        font-size: 2rem;
+    }
+    .explore .explore-qutu .sol-explore p{
+        font-size: 1.4rem;
+    }
+    .travel .travel-qutu{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .travel .travel-qutu .sag-travel h1{
+        font-size: 2rem;
+    }
+    .travel .travel-qutu .sag-travel p{
+        font-size: 1.4rem;
+    }
+    .airport .airport-qutular{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .airport .airport-qutular .sol-airport h1{
+        font-size: 2rem;
+    }
+    .airport .airport-qutular .sol-airport p{
+        font-size: 1.4rem;
+    }
+
+    footer .footer-sides{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 2rem;
+      }
+      .footer-sides .right-footer .top-side-right-footer{
+        display: flex;
+        gap: 2rem;
+       
+      }
+      .footer-sides .right-footer .top-side-right-footer a{
+        font-size: 1.4rem;
+      }
+  
+  }
+  @media(max-width:500px){
+    header{
+      padding: 0 2rem;
+     }
+     header .open-header .header-box .sol-header a{
+      font-size: 3rem;
+  }
+}
