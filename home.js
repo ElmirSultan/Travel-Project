@@ -1,4 +1,5 @@
 // İ made some changes ?!
+// İ made some changes ?!
 
 $(document).ready(function () {
   /// manshet slider ///
