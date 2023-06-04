@@ -1,3 +1,5 @@
+// İ made some changes ?!
+
 $(document).ready(function () {
   /// manshet slider ///
   var galleryThumbs = new Swiper('div.manshet_appartment .gallery-thumbs', {
